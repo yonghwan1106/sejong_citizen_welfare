@@ -176,7 +176,7 @@ export default function Home() {
                       {alert.time}
                     </div>
                     <Link
-                      href={`/household/${alert.householdId}`}
+                      href={`/households/${alert.id}`}
                       className="text-sm font-medium text-blue-600 hover:text-blue-800"
                     >
                       자세히 보기 →
