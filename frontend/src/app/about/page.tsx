@@ -99,6 +99,12 @@ export default function AboutPage() {
               대시보드로 돌아가기
             </Link>
 
+            <div className="mb-3">
+              <Badge className="bg-white/30 text-white border-white/50 backdrop-blur-sm px-4 py-2 text-sm font-medium">
+                세종시사회복지서비스원 2025년 시민복지아이디어 공모전 출품작
+              </Badge>
+            </div>
+
             <div className="flex items-center gap-4 mb-4">
               <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm">
                 <Target className="h-8 w-8 text-white" />

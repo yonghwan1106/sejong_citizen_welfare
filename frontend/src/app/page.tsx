@@ -63,6 +63,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
             <div className="animate-fade-in">
+              <div className="mb-2">
+                <Badge className="bg-white/30 text-white border-white/50 backdrop-blur-sm px-3 py-1 text-xs font-medium">
+                  세종시사회복지서비스원 2025년 시민복지아이디어 공모전 출품작
+                </Badge>
+              </div>
               <h1 className="text-3xl font-bold">
                 세종시 위기가구 선제 발굴 AI 플랫폼
               </h1>
