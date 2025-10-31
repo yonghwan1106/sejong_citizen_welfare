@@ -388,23 +388,27 @@ export default function Home() {
                   </div>
                 </Link>
 
-                <div className="group p-6 border-2 border-dashed border-gray-200 rounded-lg opacity-60 cursor-not-allowed text-center">
-                  <TrendingUp className="h-10 w-10 mx-auto mb-3 text-gray-400" />
-                  <div className="font-semibold text-gray-500">개입 관리</div>
-                  <div className="text-xs text-gray-400 mt-1 font-tabular">
+                <Link
+                  href="/interventions"
+                  className="group p-6 border-2 border-dashed border-green-300 rounded-lg hover:border-green-500 hover:bg-green-50 transition-all text-center hover-lift"
+                >
+                  <TrendingUp className="h-10 w-10 mx-auto mb-3 text-green-600 group-hover:scale-110 transition-transform" />
+                  <div className="font-semibold text-gray-900">개입 관리</div>
+                  <div className="text-xs text-gray-500 mt-1 font-tabular">
                     {stats.interventionsThisWeek}건 (금주)
                   </div>
-                  <div className="text-xs text-gray-400 mt-2">준비 중</div>
-                </div>
+                </Link>
 
-                <div className="group p-6 border-2 border-dashed border-gray-200 rounded-lg opacity-60 cursor-not-allowed text-center">
-                  <Bell className="h-10 w-10 mx-auto mb-3 text-gray-400" />
-                  <div className="font-semibold text-gray-500">분석 리포트</div>
-                  <div className="text-xs text-gray-400 mt-1">
+                <Link
+                  href="/reports"
+                  className="group p-6 border-2 border-dashed border-purple-300 rounded-lg hover:border-purple-500 hover:bg-purple-50 transition-all text-center hover-lift"
+                >
+                  <Bell className="h-10 w-10 mx-auto mb-3 text-purple-600 group-hover:scale-110 transition-transform" />
+                  <div className="font-semibold text-gray-900">분석 리포트</div>
+                  <div className="text-xs text-gray-500 mt-1">
                     월간 리포트 생성
                   </div>
-                  <div className="text-xs text-gray-400 mt-2">준비 중</div>
-                </div>
+                </Link>
               </div>
             </CardContent>
           </Card>

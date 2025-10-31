@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Home, Users, Info, FileText } from 'lucide-react';
+import { Home, Users, Info, FileText, TrendingUp, BarChart3 } from 'lucide-react';
 
 export default function Navigation() {
   const pathname = usePathname();
@@ -10,6 +10,8 @@ export default function Navigation() {
   const navItems = [
     { href: '/', label: '대시보드', icon: Home },
     { href: '/households', label: '가구 목록', icon: Users },
+    { href: '/interventions', label: '개입 관리', icon: TrendingUp },
+    { href: '/reports', label: '분석 리포트', icon: BarChart3 },
     { href: '/infographic', label: '인포그래픽', icon: FileText },
     { href: '/about', label: '프로젝트 소개', icon: Info },
   ];
