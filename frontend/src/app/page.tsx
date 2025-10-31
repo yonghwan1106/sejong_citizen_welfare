@@ -185,24 +185,26 @@ export default function Home() {
         </div>
 
         {/* 개선된 실시간 알림 섹션 */}
-        <Card className="mb-8 border-l-4 border-l-red-500 shadow-lg animate-slide-up">
-          <CardHeader>
+        <Card className="mb-8 shadow-xl animate-slide-up overflow-hidden border-0">
+          <CardHeader className="bg-gradient-to-r from-red-500 to-orange-500 text-white">
             <div className="flex items-center justify-between">
               <div>
-                <CardTitle className="flex items-center gap-2">
-                  <AlertTriangle className="h-5 w-5 text-red-600 animate-pulse" />
+                <CardTitle className="flex items-center gap-2 text-white">
+                  <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm animate-pulse">
+                    <AlertTriangle className="h-5 w-5 text-white" />
+                  </div>
                   실시간 알림
                 </CardTitle>
-                <CardDescription className="mt-1">
+                <CardDescription className="mt-2 text-white/90">
                   고위험 가구가 감지되었습니다. 긴급 개입을 검토해주세요.
                 </CardDescription>
               </div>
-              <Badge className="bg-red-100 text-red-800">
+              <Badge className="bg-white/20 text-white border-white/30 backdrop-blur-sm px-4 py-2">
                 {recentAlerts.length}건 대기 중
               </Badge>
             </div>
           </CardHeader>
-          <CardContent>
+          <CardContent className="pt-6">
             <div className="space-y-3">
               {recentAlerts.map((alert, index) => (
                 <Link
@@ -210,7 +212,7 @@ export default function Home() {
                   href={`/households/${alert.id}`}
                   className="block"
                 >
-                  <div className="flex items-center justify-between p-4 border-l-4 border-l-red-500 bg-gradient-to-r from-red-50 to-white rounded-r-lg hover:shadow-md transition-all hover:-translate-x-1 stagger-item">
+                  <div className="flex items-center justify-between p-4 bg-gradient-to-r from-gray-50 to-white rounded-lg border-2 border-gray-100 hover:border-red-200 hover:shadow-lg transition-all hover:-translate-y-1 stagger-item">
                     <div className="flex items-center gap-4">
                       <div className="flex-shrink-0">
                         <div className="w-14 h-14 rounded-full bg-gradient-risk-critical flex items-center justify-center shadow-lg">
