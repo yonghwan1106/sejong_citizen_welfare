@@ -301,27 +301,23 @@ export default function Home() {
                   </div>
                 </Link>
 
-                <Link
-                  href="/interventions"
-                  className="p-6 border-2 border-dashed rounded-lg hover:border-green-500 hover:bg-green-50 transition-all text-center"
-                >
-                  <TrendingUp className="h-8 w-8 mx-auto mb-2 text-green-600" />
-                  <div className="font-medium">개입 관리</div>
-                  <div className="text-xs text-gray-500 mt-1">
+                <div className="p-6 border-2 border-dashed rounded-lg opacity-50 cursor-not-allowed text-center">
+                  <TrendingUp className="h-8 w-8 mx-auto mb-2 text-gray-400" />
+                  <div className="font-medium text-gray-500">개입 관리</div>
+                  <div className="text-xs text-gray-400 mt-1">
                     {stats.interventionsThisWeek}건 (금주)
                   </div>
-                </Link>
+                  <div className="text-xs text-gray-400 mt-2">준비 중</div>
+                </div>
 
-                <Link
-                  href="/analytics"
-                  className="p-6 border-2 border-dashed rounded-lg hover:border-purple-500 hover:bg-purple-50 transition-all text-center"
-                >
-                  <Bell className="h-8 w-8 mx-auto mb-2 text-purple-600" />
-                  <div className="font-medium">분석 리포트</div>
-                  <div className="text-xs text-gray-500 mt-1">
+                <div className="p-6 border-2 border-dashed rounded-lg opacity-50 cursor-not-allowed text-center">
+                  <Bell className="h-8 w-8 mx-auto mb-2 text-gray-400" />
+                  <div className="font-medium text-gray-500">분석 리포트</div>
+                  <div className="text-xs text-gray-400 mt-1">
                     월간 리포트 생성
                   </div>
-                </Link>
+                  <div className="text-xs text-gray-400 mt-2">준비 중</div>
+                </div>
               </div>
             </CardContent>
           </Card>
