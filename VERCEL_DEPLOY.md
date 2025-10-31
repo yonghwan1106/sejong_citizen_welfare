@@ -9,29 +9,34 @@
 3. GitHub 저장소 `yonghwan1106/sejong_citizen_welfare` 선택
 4. Import 클릭
 
-### 2. 프로젝트 설정
+### 2. 프로젝트 설정 (중요!)
 
-**중요**: 다음 설정을 반드시 적용하세요:
+**반드시 다음 설정을 적용하세요:**
 
-#### Root Directory
+#### ✅ Root Directory
 ```
 frontend
 ```
-- "Edit" 버튼을 클릭하여 Root Directory를 `frontend`로 설정
-- 이렇게 하면 Vercel이 frontend 폴더를 프로젝트 루트로 인식합니다
+- **"Edit"** 버튼을 클릭하여 Root Directory를 `frontend`로 설정
+- 이것이 가장 중요합니다!
 
-#### Framework Preset
+#### ✅ Framework Preset
 ```
 Next.js
 ```
-- 자동으로 감지되어야 하지만, 수동으로 Next.js 선택
+- 자동 감지됨 (Root Directory 설정 후)
 
-#### Build Settings
-Root Directory를 `frontend`로 설정하면 자동으로 올바른 빌드 설정이 적용됩니다:
+#### ✅ Build Settings (자동 설정됨)
+Root Directory를 `frontend`로 설정하면:
 
-- **Build Command**: `npm run build` (자동)
-- **Output Directory**: `.next` (자동)
-- **Install Command**: `npm install` (자동)
+- **Build Command**: `next build` 또는 `npm run build`
+- **Output Directory**: `.next` (비워두기)
+- **Install Command**: `npm install`
+
+**주의**:
+- `vercel.json`은 사용하지 않습니다 (삭제됨)
+- Vercel이 Next.js를 자동으로 감지하도록 합니다
+- Root Directory 설정만으로 충분합니다
 
 ### 3. 환경 변수 설정
 
