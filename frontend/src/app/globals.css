@@ -1,3 +1,5 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -53,9 +55,72 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
+
+  /* Tabular numbers for better number display */
+  .font-tabular {
+    font-feature-settings: 'tnum' 1;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer components {
+  /* Hover lift effect for cards */
+  .hover-lift {
+    @apply transition-all duration-300;
+  }
+
+  .hover-lift:hover {
+    @apply -translate-y-1 shadow-lg;
+  }
+
+  /* Card glow effect */
+  .card-glow {
+    @apply transition-shadow duration-300;
+  }
+
+  .card-glow:hover {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.2);
+  }
+
+  /* Gradient backgrounds */
+  .gradient-critical {
+    @apply bg-gradient-risk-critical;
+  }
+
+  .gradient-high {
+    @apply bg-gradient-risk-high;
+  }
+
+  .gradient-medium {
+    @apply bg-gradient-risk-medium;
+  }
+
+  .gradient-low {
+    @apply bg-gradient-risk-low;
+  }
+
+  /* Stagger animation for list items */
+  .stagger-item {
+    @apply animate-slide-up;
+  }
+
+  .stagger-item:nth-child(1) { animation-delay: 0.05s; }
+  .stagger-item:nth-child(2) { animation-delay: 0.1s; }
+  .stagger-item:nth-child(3) { animation-delay: 0.15s; }
+  .stagger-item:nth-child(4) { animation-delay: 0.2s; }
+  .stagger-item:nth-child(5) { animation-delay: 0.25s; }
+  .stagger-item:nth-child(6) { animation-delay: 0.3s; }
+  .stagger-item:nth-child(7) { animation-delay: 0.35s; }
+  .stagger-item:nth-child(8) { animation-delay: 0.4s; }
+  .stagger-item:nth-child(9) { animation-delay: 0.45s; }
+  .stagger-item:nth-child(10) { animation-delay: 0.5s; }
 }
 
 /* 위험도별 배지 스타일 */
@@ -73,18 +138,4 @@
 
 .badge-low {
   @apply bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200;
-}
-
-/* 애니메이션 */
-@keyframes pulse-slow {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-}
-
-.animate-pulse-slow {
-  animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
